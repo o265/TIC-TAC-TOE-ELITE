@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="menu" id="menu">
+            <button class="menu-btn" id="playBtn">Play with Friend</button>
+            <button class="menu-btn" id="computerBtn">Play with Computer</button>
+            <button class="menu-btn" id="settingsBtn">Settings</button>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="status" id="status">Player X's turn</div>
+            <div class="game-board" id="board">
+                <div class="cell" data-cell="0"></div>
+                <div class="cell" data-cell="1"></div>
+                <div class="cell" data-cell="2"></div>
+                <div class="cell" data-cell="3"></div>
+                <div class="cell" data-cell="4"></div>
+                <div class="cell" data-cell="5"></div>
+                <div class="cell" data-cell="6"></div>
+                <div class="cell" data-cell="7"></div>
+                <div class="cell" data-cell="8"></div>
+            </div>
+            <button id="restartButton">Restart Game</button>
+            <button id="backToMenu">Back to Menu</button>
+        </div>
+
+        <div class="settings-container" id="settingsContainer" style="display: none;">
+            <h2>Settings</h2>
+            <div class="setting-option">
+                <label for="difficulty">Computer Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-option">
+                <label for="startingPlayer">Starting Player:</label>
+                <select id="startingPlayer">
+                    <option value="player">Player</option>
+                    <option value="computer">Computer</option>
+                </select>
+            </div>
+            <div class="setting-option">
+                <label>Theme:</label>
+                <div class="theme-options">
+                    <div class="theme-option">
+                        <button class="theme-btn" data-theme="sunset" title="Sunset Theme"></button>
+                        <span class="theme-label">Sunset</span>
+                    </div>
+                    <div class="theme-option">
+                        <button class="theme-btn" data-theme="purple" title="Purple Theme"></button>
+                        <span class="theme-label">Purple</span>
+                    </div>
+                    <div class="theme-option">
+                        <button class="theme-btn" data-theme="water" title="Water Theme"></button>
+                        <span class="theme-label">Water</span>
+                    </div>
+                </div>
+            </div>
+            <button id="saveSettings">Save Settings</button>
+            <button id="backToMenuFromSettings">Back to Menu</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
